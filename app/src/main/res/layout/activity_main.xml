@@ -23,6 +23,7 @@
             app:srcCompat="@drawable/logo" />
 
 
+
         <LinearLayout
             android:id="@+id/user_component"
             android:layout_width="match_parent"
