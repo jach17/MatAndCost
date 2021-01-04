@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MatAndCost</string>
+    <string name="user">User</string>
+    <string name="password">Password</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="sinCuenta">¿No tienes una cuenta? Registrate aquí</string>
 </resources>

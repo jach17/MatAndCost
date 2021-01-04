@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,6 +7,7 @@
     tools:context=".MainActivity">
 
     <RelativeLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/background_primary"
@@ -15,13 +15,117 @@
         tools:layout_editor_absoluteY="0dp">
 
         <ImageView
+            android:id="@+id/img_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="80dp"
-            app:srcCompat="@drawable/logo"
-            />
-        
+            android:layout_marginTop="60dp"
+            app:srcCompat="@drawable/logo" />
+
+
+        <LinearLayout
+            android:id="@+id/user_component"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_logo"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="50dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_user" />
+
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background"
+                android:hint="@string/user"
+                android:paddingLeft="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/password_component"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_component"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="50dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_password" />
+
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background"
+                android:hint="@string/password"
+                android:paddingLeft="15dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/check_component"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password_component"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:paddingRight="80dp">
+
+            <CheckBox
+                android:id="@+id/checkRecuerdame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Recordar usuario"
+                app:buttonTint="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnLoginComponent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/check_component"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#2b113e"
+                android:paddingHorizontal="20dp"
+                android:text="@string/login" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sinCuenta"
+                android:textColor="@color/black"
+                android:layout_below="@id/btnLoginComponent"
+                android:layout_marginTop="60dp"
+                android:layout_centerHorizontal="true"
+                />
+
+        </LinearLayout>
+
 
     </RelativeLayout>
 
