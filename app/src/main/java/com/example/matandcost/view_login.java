@@ -2,16 +2,19 @@ package com.example.matandcost;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class view_login extends AppCompatActivity {
 
     Button btnLogin;
     EditText txtUser, txtPassword;
+    TextView tvGoToSignUp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +22,16 @@ public class view_login extends AppCompatActivity {
         btnLogin = (Button)findViewById(R.id.btnLogin);
         txtUser = (EditText)findViewById(R.id.txtUser);
         txtPassword= (EditText)findViewById(R.id.txtPassword);
+        tvGoToSignUp = (TextView)findViewById(R.id.tvGoToSignUP);
 
+
+        tvGoToSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentGoToSignUp = new Intent(v.getContext(), view_singup.class);
+                startActivity(intentGoToSignUp);
+            }
+        });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,7 +41,7 @@ public class view_login extends AppCompatActivity {
                 if(auth(userInput, passwordInput)){
                     Toast.makeText(view_login.this, "Hola, Admin!", Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(view_login.this, "Quién demonios eres??", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(view_login.this, "Usuario no registrado, por favor crea una cuenta", Toast.LENGTH_SHORT).show();
                 }
             }
         });

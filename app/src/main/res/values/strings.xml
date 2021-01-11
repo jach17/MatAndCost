@@ -4,4 +4,8 @@
     <string name="password">Password</string>
     <string name="login">Iniciar sesión</string>
     <string name="sinCuenta">¿No tienes una cuenta? Registrate aquí</string>
+    <string name="Contrasenia">Contraseña:</string>
+    <string name="confirm">Confirme contraseña</string>
+    <string name="signup">Registrarme</string>
+    <string name="conCuenta">¿Ya tienes una cuenta? Inicia sesion aqui</string>
 </resources>

@@ -35,7 +35,7 @@
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
+                android:fontFamily="@font/roboto_medium"
                 android:text="Registrate"
                 android:textColor="@color/black"
                 android:textSize="25dp" />
@@ -48,16 +48,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/title_component"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingHorizontal="60dp"
+
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/img_logo"
                 android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="40dp">
+                android:gravity="start"
+                android:orientation="vertical"
+                >
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -78,103 +81,105 @@
                     android:background="@android:drawable/editbox_background"
                     android:hint="@string/user"
                     android:paddingLeft="15dp"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:textColorHint="#c4c4c4" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/img_logo"
                 android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="40dp">
+                android:gravity="start"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/roboto"
-                    android:text="Usuario:"
+                    android:text="@string/Contrasenia"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
 
 
                 <EditText
-                    android:id="@+id/txtUser"
+                    android:id="@+id/txtPassword"
                     android:layout_width="250dp"
                     android:layout_height="40dp"
                     android:layout_centerHorizontal="true"
                     android:layout_weight="1"
                     android:background="@android:drawable/editbox_background"
-                    android:hint="@string/user"
+                    android:hint="@string/password"
                     android:paddingLeft="15dp"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:textColorHint="#c4c4c4"
+                    android:inputType="textPassword"/>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/img_logo"
                 android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="40dp">
+                android:gravity="start"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:fontFamily="@font/roboto"
-                    android:text="Usuario:"
+                    android:text="@string/confirm"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
 
 
                 <EditText
-                    android:id="@+id/txtUser"
+                    android:id="@+id/txtConfirmeConstraseña"
                     android:layout_width="250dp"
                     android:layout_height="40dp"
                     android:layout_centerHorizontal="true"
                     android:layout_weight="1"
                     android:background="@android:drawable/editbox_background"
-                    android:hint="@string/user"
+                    android:hint="@string/password"
                     android:paddingLeft="15dp"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:textColorHint="#c4c4c4"
+                    android:inputType="textPassword"/>
 
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/btnLoginComponent"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/img_logo"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="40dp">
+                android:layout_height="match_parent"
+                android:layout_below="@+id/check_component"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-                <TextView
+                <Button
+                    android:id="@+id/btnLogin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/roboto"
-                    android:text="Usuario:"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="#2b113e"
+                    android:paddingHorizontal="20dp"
+                    android:text="@string/signup"
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:id="@+id/tvGoToLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/conCuenta"
                     android:textColor="@color/black"
-                    android:textSize="20dp" />
-
-
-                <EditText
-                    android:id="@+id/txtUser"
-                    android:layout_width="250dp"
-                    android:layout_height="40dp"
+                    android:layout_below="@id/btnLoginComponent"
+                    android:layout_marginTop="60dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_weight="1"
-                    android:background="@android:drawable/editbox_background"
-                    android:hint="@string/user"
-                    android:paddingLeft="15dp"
-                    android:singleLine="true" />
+                    />
 
             </LinearLayout>
-
 
         </LinearLayout>
 
