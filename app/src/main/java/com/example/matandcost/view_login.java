@@ -8,14 +8,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class view_login extends AppCompatActivity {
 
     Button btnLogin;
     EditText txtUser, txtPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.view_login);
         btnLogin = (Button)findViewById(R.id.btnLogin);
         txtUser = (EditText)findViewById(R.id.txtUser);
         txtPassword= (EditText)findViewById(R.id.txtPassword);
@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
                 String userInput = txtUser.getText().toString();
                 String passwordInput = txtPassword.getText().toString();
                 if(auth(userInput, passwordInput)){
-                    Toast.makeText(MainActivity.this, "Hola, Admin!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(view_login.this, "Hola, Admin!", Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(MainActivity.this, "Quién demonios eres??", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(view_login.this, "Quién demonios eres??", Toast.LENGTH_SHORT).show();
                 }
             }
         });
